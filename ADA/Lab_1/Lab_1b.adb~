@@ -1,0 +1,9 @@
+with Ada.Text_Io; use Ada.Text_Io;
+with Ada.Float_Text_Io; use Ada.Float_Text_Io;
+
+procedure Lab_1b is
+   
+begin
+   Put("hello world");
+   
+end Lab_1b;

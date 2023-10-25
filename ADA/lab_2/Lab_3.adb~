@@ -1,0 +1,46 @@
+with Ada.Text_Io; use Ada.Text_Io;
+with Ada.Integer_Text_IO ; use Ada.Integer_Text_Io;
+
+procedure Lab_3 is
+   type My_Integer          is array(1..10) of Integer;
+   
+ 
+   procedure Input(T1 : out My_Integer)is
+   begin 
+      for I in 1..10 loop
+	 Put("Mata in tal: ");
+	 Get(T1(I));
+      end loop;
+      
+   end Input;
+   
+   procedure put(T1 : in My_Integer) is
+   begin
+      for I in 1..10 loop
+	 Put(T1(I), Width => 10);
+       end loop;
+      
+   end put;
+   procedure Find_Maximum(T1 : in My_Integer; M,Index :  out Integer)  is
+      Max_Varde : Integer:=0;
+   begin
+ 
+      for I in 1..10 loop
+	 if Max_Varde < T1(I) then
+	    Max_Varde := T1(I);
+	    Index :=I;
+	    M := T1(I);
+	 end if;
+      end loop;
+   end Find_Maximum;
+     T : My_Integer;
+   Index : Integer;
+   Max : Integer;
+begin
+   Input(T);
+   Put(T);
+   Find_Maximum(T,Max, Index);
+   Put(Max);
+   Put(Index );
+   
+end Lab_3;

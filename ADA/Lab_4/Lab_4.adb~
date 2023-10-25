@@ -1,0 +1,29 @@
+with Ada.Text_Io; use Ada.Text_Io;
+with Ada.Integer_Text_Io; use Ada.Integer_Text_Io;
+with Sorted_List; use Sorted_List;
+procedure Lab_4 is
+   L: List_Type;
+   B : Boolean;
+begin
+   Insert(L,510);
+   Insert(L,5);
+   Insert(L,10);
+   Insert(L,95);
+      Remove(L, 5);
+   B := Empty(L);
+   if B then
+      Put("true ");
+   else 
+      Put("False");
+   end if;
+ 
+   New_Line;
+   Put(L);
+   New_Line;
+   if Member(L,510) then
+      Put("true ");
+   else 
+      Put("False");
+   end if;
+
+end Lab_4;

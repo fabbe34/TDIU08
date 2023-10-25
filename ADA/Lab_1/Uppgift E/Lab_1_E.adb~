@@ -1,0 +1,19 @@
+with Ada.Text_Io; use Ada.Text_Io;
+with Ada.Integer_Text_Io;use Ada.Integer_Text_Io;
+procedure Lab_1_E is
+   Varde : Integer;
+  
+begin
+   Put("Skriv in sista nummret: ");
+   Get(Varde);
+   for I in 1..10 loop
+      if (Varde mod I) =  then
+	 Put(I);
+      end if;
+   end loop;
+   
+   
+end Lab_1_E;
+
+
+

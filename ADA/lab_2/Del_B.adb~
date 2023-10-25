@@ -1,0 +1,31 @@
+with Ada.Text_Io; use Ada.Text_Io;
+with Ada.Integer_Text_IO ; use Ada.Integer_Text_Io;
+
+procedure Del_B is
+   type My_Char is array(1..256) of Character;
+   type String_Type is
+     
+      record
+	 
+	 Length : Integer:=1;
+	 Char : My_Char;
+      end record;
+     	
+   A : String_Type;
+   Charace: Character ;
+begin
+
+   while (not End_Of_File) loop
+      
+      Put("Skirv ett tecken: ");
+ 
+      Get(A.Char(A.Length));
+      A.Length := A.Length +1;
+      
+	 
+   end loop;
+   Put(A.Length );
+
+     
+   
+end Del_B;

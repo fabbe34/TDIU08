@@ -1,0 +1,28 @@
+with Ada.Text_Io; use Ada.Text_Io;
+with Ada.Integer_Text_Io; use Ada.Integer_Text_Io;
+
+procedure Lab_1_C is
+   S1 : Integer;
+   T1 : Integer;
+   S2 : Integer;
+   T2 : Integer;
+begin
+   Put("Först kör vi sträckan S1 (i mil): ");
+   Get(S1);
+   
+   Put("vi tankar nu full tank, T1 (i liter): ");
+   Get(T1);
+   
+   Put("nu kör vi sträckan S2 (i mil): ");
+   Get(S2);
+   
+   Put("vi tankar nu full tank igen, T2 (i liter): ");
+   Get(T2);
+   
+   New_Line;
+   
+   Put("Bilen drar ");
+   Put((T2/S2), Width =>3);
+   Put("Liter / Mil"); 
+   
+end Lab_1_C;

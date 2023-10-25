@@ -1,0 +1,68 @@
+V "GNAT Lib v7"
+M P W=b
+P ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV SPARK_05
+
+U lab_4%b		Lab_4.adb		c227239c NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W datum%s		datum.adb		datum.ali
+
+D ada.ads		20170106103348 76789da1 ada%s
+D a-except.ads		20151016123252 291912d5 ada.exceptions%s
+D a-inteio.ads		20070406091342 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-tags.ads		20151016130316 01f5e3ef ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-tiinio.ads		20140717063513 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
+D datum.ads		20201005164349 2dcd74cf datum%s
+D interfac.ads		20160502101001 5ab55268 interfaces%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D Lab_4.adb		20201005164637 21cc2b23 lab_4%b
+D system.ads		20170510173650 4635ec04 system%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-soflin.ads		20151020124036 14e1eb6c system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 13|1r6 1r23 2r6 2r31
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 13|2w10 2r35
+X 7 a-textio.ads
+49K13*Text_IO 471e16 13|1w10 1r27
+166U14*New_Line 13|18s13 22s13 26s13 31s4 33s4 35s4 43s4 50s4
+169U14*Skip_Line 13|17s13 21s13 25s13
+242U14*Put 13|10s10 16s13 20s13 24s13 29s4 39s7 41s7 45s7 47s7 52s7 54s7
+X 10 datum.ads
+3K9*Datum 21e10 13|3w6 3r18
+4R9*Datum_Type 20e14 13|5r11
+6X4*Month_Error 13|15r15
+6X16*Year_Error 13|19r15
+6X28*Day_Error 13|23r15
+8U14*Get 13|11s10 12s10
+9U14*Put 13|30s4 32s4 34s4
+10V13*Next_Date{4R9} 13|32s9
+11V13*Previous_Date{4R9} 13|34s8
+12V14*"<"{boolean} 13|38s10
+13V14*">"{boolean} 13|44s10
+14V14*"="{boolean} 13|51s10
+X 13 Lab_4.adb
+4U11*Lab_4 4b11 58l5 58t10
+5r4 K{10|4R9} 11m14 30r8 32r19 34r22 38r12 44r12 51r12
+5r6 K2{10|4R9} 12m14 38r7 44r7 51r7
+

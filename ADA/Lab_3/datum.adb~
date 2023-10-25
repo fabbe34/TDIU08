@@ -1,0 +1,79 @@
+with Ada.Text_IO; use Ada.Text_Io;
+with Ada.Integer_Text_Io; use Ada.Integer_Text_Io;
+
+package body Datum is
+   
+   procedure Get(K : out Datum_Type) is 
+      Char : Character;
+      Text: String(1..4);
+   begin
+      get(Text);
+      K.Y := Integer'Value(Text);
+      get(Char);
+       get(Text(1..2));
+      K.M := Integer'Value(Text(1..2));
+      get(Char);
+       get(Text(1..2));
+      K.D := Integer'Value(Text(1..2));
+      
+	  
+      
+   end Get;
+   
+   procedure Put(K : in Datum_Type) is
+   begin
+      Put(K.Y,Width=>0);
+      Put(':');
+      Put(K.M,Width=>0);
+      Put(':');
+      Put(K.D,Width=>0);
+      
+   end Put;
+   function Next_Date(K: in  Datum_Type)return Datum_Type is
+      K1 : Datum_Type;
+   begin
+      K1.D := K.D+1;
+      K1.M := K.M;
+      K1.Y := K.Y;
+      
+      if K1.M=12 and K1.D =31 then
+	 K1.M:= 1;
+	 K1.D := 1;
+	 K1.Y := K.Y +1;
+
+      elsif (K1.D =31 and (K1.M = 1 or  K1.M = 3 or  K1.M = 5 or  K1.M = 7 or  K1.M = 8 or K1.M = 10)) or (K1.D =30 and (K1.M = 4 or  K1.M = 6 or  K1.M = 9 or  K1.M = 11)) or (K1.D =28 and K1.M =2) then
+	 K1.M := K.M+1;
+	 K1.D:=1;
+      end if;
+      
+      
+      return K1;
+   end Next_Date;
+   function Previous_Date(K: in  Datum_Type)return Datum_Type is
+      K1 : Datum_Type;
+   begin
+      K1.D := K.D-1;
+      K1.M := K.M;
+      K1.Y := K.Y;
+      
+      if K1.M = 1 and K1.D = 0 then
+	 K1.M:= 12;
+	 K1.D := 31;
+	 K1.Y := K.Y -1;
+      elsif K1.D = 0 then
+	 K1.D:=31;
+	K1.M:=K1.M-1; 
+      end if;
+      return K1;
+   end Previous_Date;
+   
+   function "<"(K1,K2 : in Datum_Type) return Boolean is
+   begin
+      if  K1.Y < K2.Y then
+	 return True;
+      else 
+	 return False;
+      end if;
+   end "<";
+   
+end Datum;

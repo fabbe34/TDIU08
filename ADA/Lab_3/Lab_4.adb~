@@ -1,0 +1,25 @@
+with Ada.Text_IO; use Ada.Text_Io;
+with Ada.Integer_Text_Io; use Ada.Integer_Text_Io;
+with Datum ; use Datum;
+procedure Lab_4 is
+   K,K2 : Datum_Type;
+begin
+   Put("Skriv in ett nummer: ");
+   Get(K);
+   Put("Datumet är: ");
+   Put(K);
+   New_Line;
+   Put( Next_Date(K));
+   New_Line;
+   Put(Previous_Date(K));
+   New_Line;
+   Put("Ett till Datum: ");
+   Get(K2);
+   
+   if K2 < K then
+      Put("sant");
+   else 
+      Put("False");
+    end if;
+	  
+end Lab_4; 

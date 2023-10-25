@@ -1,0 +1,49 @@
+with Ada.Text_Io; use Ada.Text_Io;
+with Ada.Integer_Text_Io; use Ada.Integer_Text_Io;
+with Ada.Float_Text_Io; use Ada.Float_Text_Io;
+
+procedure Lab_1_B is
+   X: Integer;
+   Y :  Integer;
+   Storlek : Integer ;
+begin
+   Put("Ange pyramidens storlek: ");
+	  Get(Storlek);
+   
+	 Put("  -_ | _-");
+	 New_Line;
+	 Put("__ //.\\__");
+	 New_Line;
+	 Put("  _\\""//_ ");
+	 New_Line;
+	 Put("   - | -");
+   
+     
+   
+   X:=Storlek;
+   Y:=Storlek+10;
+   New_Line;
+   for I in 1..Storlek loop
+     
+      for I in 1..(Storlek*2+11) loop
+	
+	 if I >= X and I <= Y then
+	     if I= X then 
+		Put("/");
+	     elsif I=Y then
+		Put("\");
+	     else
+		Put("A");
+	    end if;
+	 else
+	    Put(" ");
+	 end if;
+	 
+      end loop;
+   New_Line;
+   X := X-1;
+   Y := Y+1;
+   end loop;
+   
+   
+end Lab_1_B;

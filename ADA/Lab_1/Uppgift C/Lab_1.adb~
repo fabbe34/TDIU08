@@ -1,0 +1,118 @@
+with Ada.Text_Io; use Ada.Text_Io;
+with Ada.Float_Text_Io; use Ada.Float_Text_Io;
+with Ada.Integer_Text_Io; use Ada.Integer_Text_Io;
+
+procedure Lab_1 is
+   F_Pris : Float:=0.00;
+   S_Pris : Float:= 0.00;
+   Steg : Float:=0.00;
+   Moms : Float:=0.00;
+   
+   procedure F_Pris_P(A : in out Float) is 
+   begin
+      Put("Första priset: ");
+      Get(A);
+      loop 
+	 if A < 0.00 then
+	    Put("Du skrev ett nummer som är mindre en 0 testa igen:  ");
+	    Get(A);
+	 elsif A  > 0.00  then
+	    exit;
+	 end if;
+      end loop;
+      
+      
+   end F_Pris_P;
+
+
+
+
+
+   procedure S_Pris_P ( A: in out Float; B: in Float ) is
+   begin
+      
+      Put("Sista priset: ");
+      Get(A);
+      loop 
+	 if A  < B then
+	    Put("Du skrev ett nummer som är mindre en Första priset:  ");
+	    Get(A);
+	 elsif A  > B then
+	    exit;
+	 end if;
+      end loop;
+      
+   end S_Pris_P;
+   
+   
+   procedure Steg_P ( A: in out Float) is 
+   begin
+      Put("Steg: ");
+      Get(A   );
+      loop 
+	 if A    < 0.00 then
+	    Put("Du skrev ett nummer som är mindre en 0:  ");
+	    Get(A   );
+	 elsif A     >0.00 then
+	    exit;
+	 end if;
+      end loop;
+ 
+      
+   end Steg_P;
+   
+   
+   procedure Moms_P(A : in out Float) is 
+   begin
+      Put("Momsprocent: ");
+      Get(A)   ;
+      loop 
+	 if A     < 0.00 or A    > 100.00  then
+	    Put("Du skrev ett nummer som är mindre än 0 eller högre än 100:  ");
+	    Get(A   );
+	 elsif A    > 0.00 or A    < 100.00  then
+	    exit;
+	 end if;
+      end loop;
+      New_Line; 
+   
+   end Moms_P; 
+   
+   -----------------------------------
+   
+   procedure Tabell(Pris1,Pris2,Steg1,Moms1 : in out Float)  is   
+   begin
+       Put("Momstabell");
+       New_Line; 
+       Put("pris utan mom Moms Pris med moms");
+       New_Line;
+       while Pris1  <= Pris2  loop
+	  Put(Pris1 , Exp=>0, Aft=>2, Fore=>6);
+      
+      
+	  Put(((Pris1 )*(Moms1/100.00)), Exp=>0, Aft=>2, Fore=>6);
+      
+	  Put(((Pris1   )*(Moms1/100.00)) + Pris1 , Exp=>0, Aft=>2, Fore=>6);
+	  Pris1  := Pris1  + Steg1; 
+	  New_Line;
+      
+      
+       end loop;
+   end Tabell;
+
+
+begin
+   
+   F_Pris_P(F_Pris);
+   
+   
+   S_Pris_P(S_Pris, F_Pris);
+   
+   Steg_P(Steg);
+   
+ 
+   Moms_P(Moms);
+   
+   Tabell(F_Pris,S_Pris,Steg,Moms);
+  
+end Lab_1;

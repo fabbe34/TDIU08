@@ -1,0 +1,9 @@
+with Ada.Text_Io; use Ada.Text_Io;
+with Ada.Integer_Text_Io; Use Ada.Integer_Text_Io;
+with Ada.Float_Text_Io; Use Ada.Float_Text_Io;
+
+procedure Lab_1_B is
+begin
+   Put("hej");
+   
+end Lab_1_B;
