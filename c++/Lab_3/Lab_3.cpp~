@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+struct person
+{
+  string namn;
+  string efternamn;
+  string klubb;
+};
+void input(person & b);
+int main()
+{
+  vector<person> anmalning ;
+  cout<<"Mata in deltagare: "<<endl;
+  person add;
+  do 
+    {
+      input(add);
+    }
+  while(add.namn != "");
+  
+
+  anmalning.insert(begin(anmalning),add);
+}
+void input(person & b)
+{
+  cin >> b.namn >> b.efternamn>> b.klubb;
+}
